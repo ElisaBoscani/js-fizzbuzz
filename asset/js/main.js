@@ -5,8 +5,13 @@
 //-i multipli sia di 3 che di 5 devono essere stampati tramite una stringa
 // va mandato a scermo
 
-for (let i = 0; i <= 100; i++) {
+//elementi del dom
+const gridEl = document.getElementById("grid");
+
+//stampare i numeri
+for (let i = 1; i <= 100; i++) {
   console.log(i);
+
   let number = i;
   if (number % 3 == 0 && number % 5 == 0) {
     number = "FizzBuzz";
@@ -16,4 +21,8 @@ for (let i = 0; i <= 100; i++) {
     number = "Buzz";
   }
   console.log(number);
+
+  const card = document.createElement("div");
+  card.append(number);
+  gridEl.append(card);
 }
