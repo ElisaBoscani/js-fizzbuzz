@@ -1,0 +1,13 @@
+.cardText {
+  width: 85px;
+  height: 85px;
+  background-color: #070d3b;
+  color: aliceblue;
+  border: solid black 1px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}

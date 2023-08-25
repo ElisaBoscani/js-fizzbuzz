@@ -11,18 +11,24 @@ const gridEl = document.getElementById("grid");
 //stampare i numeri
 for (let i = 1; i <= 100; i++) {
   console.log(i);
+  const card = document.createElement("div");
 
   let number = i;
   if (number % 3 == 0 && number % 5 == 0) {
     number = "FizzBuzz";
+    card.style.backgroundColor = "violet";
+    card.style.color = "black";
   } else if (number % 3 == 0) {
     number = "Fizz";
+    card.style.backgroundColor = "red";
+    card.style.color = "black";
   } else if (number % 5 == 0) {
     number = "Buzz";
+    card.style.backgroundColor = "yellow";
+    card.style.color = "black";
   }
   console.log(number);
-
-  const card = document.createElement("div");
+  card.classList.add("cardText");
   card.append(number);
   gridEl.append(card);
 }
